@@ -1,8 +1,9 @@
 #include <stdio.h>
 
 /*
-*Authour: Chillexy Steven                                                          *Program: WinMingle Community C Training
-*Description: printing all digit number of base 10 starting from 0
+*Authour: Chillexy Steven  
+*Program: WinMingle Community C Training
+*Description: printing all digit number of base 10 starting from 0 without the use of char variables
 */
 
 int main(void){
