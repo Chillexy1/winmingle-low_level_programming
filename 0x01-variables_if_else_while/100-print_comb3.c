@@ -22,8 +22,11 @@ int main(void)
             }
             putchar(first+'0');
             putchar(second+'0');
-            putchar(',');
-            putchar(' ');
+            if(!(first == 9 && second == 8))
+            {
+                putchar(',');
+                putchar(' ');
+            }
             
             
             second++;
