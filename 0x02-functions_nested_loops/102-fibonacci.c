@@ -9,7 +9,7 @@
 */
 
 void print_fibonacci(void){
-    long long current = 2;
+    long long current = 1;
     long long previous = 1;
     long long next;
     int n =1;
