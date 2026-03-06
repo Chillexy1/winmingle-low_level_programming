@@ -10,4 +10,6 @@ void _puts(char *str);
 
 void print_rev(char *s);
 
+void alph_string(char *s);
 
+void rev_string(char *s);
