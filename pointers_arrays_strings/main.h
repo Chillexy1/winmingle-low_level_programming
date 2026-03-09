@@ -26,3 +26,6 @@ char *_strcpy(char *dest, char *src);
 int _len(char *src);
 
 int _atoi(char *s);
+
+void rand_password(char *s );
+void print_crackme(char *s);
