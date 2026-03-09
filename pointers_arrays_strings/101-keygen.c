@@ -14,9 +14,9 @@ void print_crackme(char *s){
 
     rand_password(s);
 
-    printf("testing the code: %s\n", s);
+//    printf("testing the code: %s\n", s);
 
-    printf("Enter password; ");
+    printf("Enter password: ");
     scanf("%14s", input);
 
     if(strcmp(input, s) == 0){
