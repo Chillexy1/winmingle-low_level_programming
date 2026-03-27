@@ -21,3 +21,7 @@ Duplicate and concatenate strings using dynamically allocated memory
 
 Build strings from program arguments and split strings into words
 
+
+all compilation are to be done with the flags:
+
+gcc -Wall -Werror -Wextra -pedantic -std=gnu89
