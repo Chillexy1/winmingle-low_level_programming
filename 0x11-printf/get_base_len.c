@@ -1,6 +1,6 @@
 #include "main.h"
 /*
- * get the length of any base number other than base 10
+ * returns the length of an unsigned long number of any base type
  */
 
 int base_len(unsigned long n, unsigned long base) {
