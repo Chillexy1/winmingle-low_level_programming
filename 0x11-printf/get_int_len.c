@@ -4,15 +4,16 @@
 
 int int_len(int n) {
   int len = 1;
+  long num = n; // handels any overflow values
 
   if (n < 0) {
     len++; /* counts the '-' sign*/
-    n = -n;
+    num = -num;
   }
 
-  while (n >= 10) {
+  while (num >= 10) {
     len++;
-    n /= 10;
+    num /= 10;
   }
   return len;
 }
