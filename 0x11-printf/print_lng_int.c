@@ -3,11 +3,10 @@
 /*
  *Author: Chillexy Steven
  *Program: WinMingle Community C Training
- *Description: fuction that prints any interger number
+ *Description: fuction that prints any interger number of a 'long'data type
  */
 
-void print_lng_int(long int n, char *buffer,
-                   int *index) { /* checks if number is less than 0 */
+void print_lng_int(long int n, char *buffer, int *index) {
   if (n < 0) {
     store_buffer('-', buffer, index);
     n = -n;
