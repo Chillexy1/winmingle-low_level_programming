@@ -18,7 +18,7 @@ int append_text_to_file(const char *filename, char *text_content)
 		return (-1);
 	
 	/* creates file if it exist */
-	fd = open(filename, O_APPEND | 0644);
+	fd = open(filename,O_WRONLY | O_APPEND);
 	if (fd == -1) /* checks if file doesn't exist */
 		return (-1);
 
