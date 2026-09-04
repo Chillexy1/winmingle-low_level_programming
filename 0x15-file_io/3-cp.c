@@ -46,18 +46,25 @@ int main(int argc, char *argv[])
 		total = 0;
 		while (total < FD_VALUE)
 		{
-			written = write(file_to, buffer, FD_VALUE);
+			written = write(file_to, buffer + total, FD_VALUE - total);
 
-			/* checks if write failed  */
+			/* checks if write failed, print error msg and close both file */
 			if (written == -1)
 			{
+				close(file_from);
+				close(file_to);
 				dprintf(2, "Erro: can't print to %s\n", argv[2]);
 				exit(99);
 			}
 			total += written;
 		}
 	}
-
+/* close files if error occur */
+	if (FD_VALUE == -1)
+	{
+		close(file_from);
+		close(file_to);
+	}
 	
 	/* checks if closed files failed also */
 	if (close(file_from) == -1)
@@ -71,9 +78,6 @@ int main(int argc, char *argv[])
 		dprintf(2, "Error: can't close fd %li\n", FD_VALUE);
 		exit(100);
 	}
-
-	close(file_from);
-	close(file_to);
 
 	return (0);
 }
