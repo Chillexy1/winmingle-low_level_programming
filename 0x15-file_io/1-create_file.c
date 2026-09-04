@@ -17,13 +17,13 @@ int create_file(const char *filename, char *text_content)
 
 	if (!text_content) /* create an empty file if text_content is NULL */
 	{
-		fd = open(filename, O_RDWR | O_CREAT | O_TRUNC | 0644/* rw---- permission */);
+		fd = open(filename, O_RDWR | O_CREAT | O_TRUNC, 0644/* rw---- permission */);
 		if (fd == -1)
 			return (-1);
 	}
 
 
-	fd = open(filename, O_RDWR | O_CREAT | O_TRUNC | 0644/* rw---- permission */);
+	fd = open(filename, O_RDWR | O_CREAT | O_TRUNC , 0644/* rw---- permission */);
 	if (fd == -1) /* return -1 if file failed to open */
 		return (-1);
 
