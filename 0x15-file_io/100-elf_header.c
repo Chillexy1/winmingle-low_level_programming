@@ -10,14 +10,15 @@
 
 int main(int argc, char *argv[])
 {
-	int fd,i;
+	int fd,i, k = 0;
 	unsigned char buffer[16];
 	unsigned char magic[4] = {0x7f,'E','L','F'};
 	ssize_t read_size;
 	Elf64_Ehdr header64;
 	Elf32_Ehdr header32;
 
-	if (argc != 2) /* handles arguments counts*/
+
+	if (argc != 2)  /*handles arguments counts */
 	{
 		fprintf(stderr, "Usage: elf_header elf_filename\n");
 		exit(98);
@@ -68,6 +69,7 @@ int main(int argc, char *argv[])
 		exit(98);
 	}
 
+
 	/*decide the class to flow with ELF32 or ELF64*/
 	if (buffer[EI_CLASS] == ELFCLASS32)
 	{
@@ -78,6 +80,18 @@ int main(int argc, char *argv[])
 			close(fd);
 			exit(98);
 		}
+		
+		printf("ELF Header:\n");
+		
+		/* Magic information */
+		printf("Magic: ");
+
+		while (k < 16)
+		{
+			printf("%02x",header32.e_ident[k]);
+			k++;
+		}
+		printf("\n");
 
 		printf("Class:			ELF32\n");
 
@@ -135,6 +149,19 @@ int main(int argc, char *argv[])
 			close(fd);
 			exit(98);
 		}
+
+		printf("ELF Header:\n");
+
+		/* magic information */
+		printf("Magic: ");
+
+		while (k < 16)
+		{
+			printf("%02x ",header64.e_ident[k]);
+			k++;
+		}
+		printf("\n");
+
 
 		printf("Class:			ELF64\n");
 
