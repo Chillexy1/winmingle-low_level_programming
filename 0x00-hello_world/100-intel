@@ -1,0 +1,5 @@
+#!/bin/bash
+#Author: Chillexy Steven 
+#Program: WinMingle Community C Training
+#Description: generate the assembly code (intel syntax) of a c code and saves it to an output file
+gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -S -masm=intel "$1" -o "$2"
