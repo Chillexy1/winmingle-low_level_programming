@@ -1,0 +1,5 @@
+#!/bin/bash
+#Author: Chillexy Steven                                    
+#Program: WinMingle Community C Training
+#Description: this generates the assembly code of a c file and saves it an output file
+gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -S "$1" -o "$2"
