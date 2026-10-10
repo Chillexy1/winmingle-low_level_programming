@@ -1,0 +1,5 @@
+#!/bin/bash
+#Author: Chillexy Steven                                    
+#Program: WinMingle Community C Training
+#Description: comoiles a c file but don't link
+gcc -c $CFILE 
