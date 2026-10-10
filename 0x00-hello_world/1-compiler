@@ -2,4 +2,4 @@
 #Author: Chillexy Steven                                    
 #Program: WinMingle Community C Training
 #Description: comoiles a c file but don't link
-gcc -c "$1" -o "$2" 
+gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -c "$1" -o "$2" 
