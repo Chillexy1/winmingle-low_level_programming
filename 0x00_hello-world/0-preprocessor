@@ -1,5 +1,0 @@
-#!/bin/bash
-#Author: Chillexy Steven     
-#Program: WinMingle Community C Training
-#Description: runs a c file through the preprocrssor and saves the result into another file
-gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -E $CFILE -o c
