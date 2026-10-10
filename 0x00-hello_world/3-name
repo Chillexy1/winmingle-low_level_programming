@@ -1,0 +1,5 @@
+#!/bin/bash
+#Author: Chillexy Steven                                    
+#Program: WinMingle Community C Training
+#Description: this a script that compiles a c code and creates and executable name
+gcc -Wall -Werror -Wextra -pedantic -std=gnu89 "$1" -o "$2"
