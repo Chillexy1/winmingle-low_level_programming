@@ -1,8 +1,9 @@
 #include <stdio.h>
 
 /*
-*Authour: Chillexy Steven                                                            *Program: WinMingle Community C Training
-*Description: this is a program to print out sinfle digits of numbers seperated by comma and space 
+*Authour: Chillexy Steven                                                    
+*Program: WinMingle Community C Training
+*Description: this  program to print integers of base 10 seperated by comma and space 
 */
 
 int main(void){
@@ -10,8 +11,11 @@ int main(void){
     int n;
 
     for (n = 0; n < base; n++)
-        printf("%d, ",n);
-    
+    {
+	    if ( n > 0 && n != base )
+		    printf(", ");
+	    printf("%d", n);;
+    }
     printf("\n");
     return 0;
 
