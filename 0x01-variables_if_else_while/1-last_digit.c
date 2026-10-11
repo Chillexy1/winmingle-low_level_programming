@@ -1,13 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-
+#include <string.h>
 /* 
  *Author: Chillexy Steven
  *Program: WinMingle Community C Training
  *Description: this program outputs the last digit of a random number with a cobdition that ita either equals to 0, greater than 5, less than 6 and not 0 
  */
-
 int main(void){
     int n;
 
@@ -18,7 +17,7 @@ int main(void){
     srand(time(NULL)); /* we use this to avoid repetition of a random number */
 
 
-    n = rand(); /* we assign a r andom numver to n */
+    n = rand(); /* we assign a random numver to n */
 
 
     sprintf(str, "%d", n); /* we convert the randomly generated to a string in order to get the last digit */
