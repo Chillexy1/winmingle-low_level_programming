@@ -3,14 +3,21 @@
 /* 
  *Authour: Chillexy Steven
  *Program: WinMingle Community C Training
- *Description: printing alphabetas in lowercase and uppercase
+ *Description: printing alphabet in lowercase and uppercase
  * */
 
 int main(void){
-    char c;
-    for(c = 'a'; c <= 'z'; c++){
-        putchar(c);
-    
+    char c = 'a';
+    while (c <= 'z')
+    {
+	    putchar(c);
+	    c++;
+    }
+    c ='A';
+    while (c <= 'Z')
+    {
+	    putchar(c);
+	    c++;
     }
     putchar('\n');
     return (0);
