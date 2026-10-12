@@ -6,26 +6,33 @@
 *Authour: Chillexy Steven  
 *Program: WinMingle Community C Training
 *Description: tthis function prints out the first 98 fibonacci.
+*compilation: must be compiled with print_unsigned,_putchar along with a main.c function
 */
 
-void prints_fibonacci(void){
-    unsigned long long prev_low = 1, prev_high = 0;
-    unsigned long long currn_low = 2, currn_high = 0;
-    unsigned long long next_high, next_low;
-    unsigned long long carry;
+void prints_fibonacci(void)
+{
+    unsigned long prev_low = 1, prev_high = 0;
+    unsigned long currn_low = 2, currn_high = 0;
+    unsigned long next_high, next_low;
+    unsigned long carry;
     int n = 3;
 
-    printf("%llu, ", prev_low);
-    printf("%llu", currn_low);
+    print_unsigned(prev_low);
+    _putchar(',');
+    _putchar(' ');
+    print_unsigned(currn_low);
 
-    while(n <= 98){
-        if(n != 0){
-            printf(", ");
+    while(n <= 98)
+    {
+        if(n != 0)
+	{
+            _putchar(',');
+	    _putchar(' ');
         }
         next_low = prev_low + currn_low;
 
-        if(next_low >= 1000000000LLU){
-            next_low -= 1000000000LLU;
+        if(next_low >= 1000000000UL){
+            next_low -= 1000000000UL;
             carry = 1;
         }
         else
@@ -35,11 +42,12 @@ void prints_fibonacci(void){
 
         next_high = prev_high + currn_high + carry;
         if(next_high == 0){
-            printf("%llu", next_low);
+            print_unsigned(next_low);
         }
         else
         {
-            printf("%llu%09llu",next_high, next_low);
+		print_unsigned(next_high);
+    		print_unsigned(next_low);
         }
 
         prev_high = currn_high;
