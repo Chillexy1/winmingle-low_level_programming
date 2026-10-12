@@ -1,4 +1,5 @@
 #include "main.h"
+#include <unistd.h>
 /*
 *Authour: Chillexy Steven 
 *Program: WinMingle Community C Training
@@ -8,15 +9,17 @@
 
 void rev_string(char *s)
 {
-    int n;
-
-    n = _strlen(s) -1;
-
-    
-    while(n >= 0){ /* represents starting from the end of the loop we got using _strlen */
-        _putchar(s[n]);
-
-        n--;
+    int n, start = 0;
+    char temp;
+    n = _strlen(s) - 1;
+    while (start < n)
+    {
+	    temp = s[start];
+	    s[start] = s[n];
+	    s[n] = temp;
+	    start++;
+	    n--;
     }
+    write(1, s,_strlen(s));
     _putchar('\n');
 }
