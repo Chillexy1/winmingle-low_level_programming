@@ -1,5 +1,4 @@
 #include "main.h"
-#include <unistd.h>
 /*
 *Authour: Chillexy Steven 
 *Program: WinMingle Community C Training
@@ -9,7 +8,7 @@
 
 void rev_string(char *s)
 {
-    int n, start = 0;
+    int n, i, start = 0;
     char temp;
     n = _strlen(s) - 1;
     while (start < n)
@@ -20,6 +19,11 @@ void rev_string(char *s)
 	    start++;
 	    n--;
     }
-    write(1, s,_strlen(s));
+    i = 0;
+    while (s[i])
+    {
+	    _putchar(s[i]);
+	    i++;
+    }
     _putchar('\n');
 }
