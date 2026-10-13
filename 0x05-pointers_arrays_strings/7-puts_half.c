@@ -1,6 +1,4 @@
 #include "main.h"
-#include <stdio.h>
-
 /*
 *Authour: Chillexy Steven 
 *Program: WinMingle Community C Training
@@ -13,7 +11,7 @@ void puts_half(char *str){
     int half;
 
 /*get half of the string */
-    n = strlen(str);
+    n = _strlen(str);
     half = n/2;
     
 /* we use the half to loop through our string*/
