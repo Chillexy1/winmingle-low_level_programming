@@ -1,10 +1,9 @@
 #include "main.h"
 /*
-*Authour: Chillexy Steven   
+*Author: Chillexy Steven   
 *Program: WinMingle Community C Training
 *Description: using the random generated password, this function prints out a valid password used in crackme programs.
 */
-
 void print_crackme(void)
 {
 	char letters[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
@@ -18,5 +17,4 @@ void print_crackme(void)
 		i++;
 	}
 	_putchar('\n');
-
 }
