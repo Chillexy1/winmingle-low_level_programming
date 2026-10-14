@@ -25,7 +25,7 @@ void print_crackme(void){
 	char letters[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
 	int i = 0;
 	int num = 4;
-	int size = _strlen(letters) - 1;
+	int size = _strlen(letters);
 	while (i < 10)
 	{
 		_putchar(letters[num %size]);
