@@ -1,6 +1,9 @@
+
 int _putchar(char c);
 
 void print_number(int n);
+
+void print_unsigned(unsigned long n);
 
 void print_long(long n);
 

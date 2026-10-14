@@ -8,7 +8,7 @@
 *compilation: -Wall -Werror -Wextra -pedantic -std=gnu89 
 */
 
-//solving this using strlen
+/*solving this using strlen */
 /*
 int _strlen(char *s) {
     int n;
