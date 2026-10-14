@@ -1,31 +1,16 @@
 void reset_to_98(int *n);
-
 void swap_int(int *a, int *b);
-
 int _strlen(char *s);
-
 int _putchar(char c);
-
 void _puts(char *str);
-
 void print_rev(char *s);
-
 void alph_string(char *s);
-
 void rev_string(char *s);
-
 void puts2(char *str);
-
 void puts_half(char *str);
-
 void print_array(int *a, int n);
-
 void print_numbers(int n);
-
 char *_strcpy(char *dest, char *src);
 int _len(char *src);
-
 int _atoi(char *s);
-
-void rand_password(char *s );
 void print_crackme(void);
