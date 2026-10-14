@@ -1,9 +1,9 @@
 #include "main.h"
-
 /*
- * printing numbers with _putchar
- * */
-
+*Author: Chillexy Steven      
+*Program: WinMingle Community C Training
+*Description: this a function that print out any integer number using _putchar
+*/
 void print_numbers(int n){
     if(n < 0){ /*checks if n is negative number */
         _putchar('-');
