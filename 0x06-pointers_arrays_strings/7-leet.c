@@ -6,7 +6,7 @@
 */
 
 char *leet(char *s){
-    int i;
+    int i = 0;
     while(s && s[i])
     {
 	    if (s[i] >= 'A' && s[i] <= 'Z')
