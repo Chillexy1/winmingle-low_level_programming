@@ -1,23 +1,20 @@
 #include "main.h"
-#include <string.h>
-#include <stdio.h>
-
 /*
-*Authour: Chillexy Steven 
+*Author: Chillexy Steven 
 *Program: WinMingle Community C Training
 *Description: this function reverses the content of an array of int
 */
-
-void reverse_array(int *a, int n){
-    int i;
-    
-    for(i = n-1; i >= 0; i--){
-        if(i != n-1){
-            _putchar(',');
-            _putchar(' ');
-        }
-        print_number(a[i]);
-        
-    }
-    _putchar('\n');
+void reverse_array(int *a, int n)
+{
+	int start = 0;
+	int temp;
+	int len = n -1;
+	while (start <= len)
+	{
+		temp = a[start];
+		a[start] = a[len];
+		a[len] = temp;
+		start++;
+		len--;
+	}
 }
