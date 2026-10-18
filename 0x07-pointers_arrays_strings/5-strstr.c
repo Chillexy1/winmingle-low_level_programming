@@ -1,12 +1,20 @@
 #include "main.h"
-#include <string.h>
-
 /*
-*Authour: Chillexy Steven   
+*Author: Chillexy Steven   
 *Program: WinMingle Community C Training
-*Description: this function locates a substring from source(src) to destination(dst)
+*Description: this function locates a substring from needle to haystack
 */
-
-char *_strstr(char *haystack, char *needle){
-    return strstr(haystack, needle);
+char *_strstr(char *haystack, char *needle)
+{
+	int i = 0;
+	int j = 0;
+	while (haystack[i])
+	{
+		while (needle[j] && needle[j] == haystack[i + j])
+			j++;
+		if (needle[j] == '\0')
+			return (haystack + i);
+		i++;
+	}
+	return (0);
 }
