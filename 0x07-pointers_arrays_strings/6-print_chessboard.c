@@ -1,11 +1,9 @@
 #include "main.h"
-
 /*
-*Authour: Chillexy Steven                   
+*Author: Chillexy Steven                   
 *Program: WinMingle Community C Training
 *Description: we're printing out a 8x8 chessboard from char board[8][8]
 */
-
 void print_chessboard(char (*a)[8]){
     int i, j;
 
