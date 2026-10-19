@@ -1,9 +1,9 @@
 #include "main.h"
-
 /*
- * checks  and perform palindrome strategies in here
+*Author: Chillexy Steven   
+*Program: WinMingle Community C Training
+*Description: checks  and perform palindrome strategies in here
  */
-
 int checks_palindrome(char *s, int start, int end){
     if(start >= end)
         return 1;
