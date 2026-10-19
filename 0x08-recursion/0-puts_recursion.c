@@ -1,16 +1,13 @@
 #include "main.h"
-#include <stdio.h>
-
 /*
-*Authour: Chillexy Steven   
+*Author: Chillexy Steven   
 *Program: WinMingle Community C Training
 *Description: this is a function that prints out a string followed by a new line
 */
-
-void _puts_recursion(char *s){
-    int i;
-    for (i = 0; s[i] != '\0'; i++){
-        _putchar(s[i]);
-    }
-    _putchar('\n');
+void _puts_recursion(char *s)
+{
+	if (*s == '\0')
+		return;
+	_putchar(*s);/*print character one after the other*/
+	_puts_recursion(s + 1);/*recursive call*/
 }
