@@ -1,30 +1,29 @@
+#include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <ctype.h>
-
 /*
-*Authour: Chillexy Steven    
+*Author: Chillexy Steven    
 *Program: WinMingle Community C Training
 *Description: this program prints the minimum number of coins needed to make a change for an amount of money
 */
-
 int main(int argc, char *argv[]){
     int coins[] = {25, 10, 5, 2, 1};
     
     int i, lenght, amount, j, count = 0;
 
     if(argc < 2){
-        printf("only one index number needed");
+        printf("only one index number needed\n");
         return 1;
     }
     else if(argc > 2){
-        printf("only one index number needed");
+        printf("only one index number needed\n");
         return 1;
     }
 
     for(j = 0;  argv[1][j]; j++){
         if(!(isdigit(argv[1][j]))){
-            printf("Erro\n");
+            printf("Error\n");
             return 1;
         }
 
