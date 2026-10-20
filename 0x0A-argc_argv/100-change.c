@@ -12,15 +12,10 @@ int main(int argc, char *argv[]){
     
     int i, lenght, amount, j, count = 0;
 
-    if(argc < 2){
-        printf("only one index number needed\n");
+    if(argc != 2){
+        printf("Error\n");
         return 1;
     }
-    else if(argc > 2){
-        printf("only one index number needed\n");
-        return 1;
-    }
-
     for(j = 0;  argv[1][j]; j++){
         if(!(isdigit(argv[1][j]))){
             printf("Error\n");
