@@ -1,5 +1,5 @@
 in this lesson we learnt how to do the following:
-*
+
 How to use arguments passed to our program
 
 
