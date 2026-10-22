@@ -1,5 +1,4 @@
 #include "dog.h"
-
 /*
 *Author: Chillexy Steven                   
 *Program: WinMingle Community C Training
