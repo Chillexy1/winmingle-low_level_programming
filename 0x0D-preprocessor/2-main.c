@@ -1,4 +1,4 @@
-#include "main.h"
+#include <stdio.h>
 /*
  *Author: Chillexy Steven
  *Program: WinMingle Community C Training
@@ -8,12 +8,7 @@
 
 int main(void) {
   char *filename = __FILE__;
-  int i;
-
-  for (i = 0; filename[i]; i++)
-    _putchar(filename[i]);
-
-  _putchar('\n');
+  printf("%s\n", filename);
 
   return 0;
 }
