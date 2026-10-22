@@ -15,8 +15,10 @@ int main(int argc, char *argv[])
     exit(98);
   }
 
-  while (argv[1][i]) {
-    if (!(isdigit(argv[1][i]))) {
+  while (argv[1][i])
+  {
+    if (!(argv[1][i] >= '0' && argv[1][i] <= '9'))
+    {
       print_error();/*print Error message if incorect argument*/
       exit(98);
     }
@@ -25,16 +27,18 @@ int main(int argc, char *argv[])
   }
   k = 0;
 
-  while (argv[2][k]) {
-    if (!(isdigit(argv[2][k]))) {
+  while (argv[2][k])
+  {
+    if (!(argv[2][k] >= '0' && argv[2][k] <= '9')) 
+    {
       print_error();/*print Error message if incorect argument*/
       exit(98);
     }
     k++;
   }
 
-  num1 = atoi(argv[1]);
-  num2 = atoi(argv[2]);
+  num1 = _atoi(argv[1]);
+  num2 = _atoi(argv[2]);
 
   mul = num1 * num2;
 
