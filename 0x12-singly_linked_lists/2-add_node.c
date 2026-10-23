@@ -1,6 +1,4 @@
 #include "lists.h"
-#include <string.h>
-
 /*
 *Author: Chillexy Steven
 
