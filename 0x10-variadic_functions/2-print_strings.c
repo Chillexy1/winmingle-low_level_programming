@@ -4,7 +4,7 @@
 /*
  *Author: Chillexy Steven
  *Program: WinMingle Community C Training
- *Description: we're to peint out only strings in this program, any other input
+ *Description: we're to print out only strings in this program, any other input
  * are to be neglected.
  */
 
@@ -20,7 +20,7 @@ void print_strings(const char *separator, const unsigned int n, ...) {
     if (separator && i > 0)
       printf("%s", separator);
     if (c == NULL)
-      printf("nill");
+      printf("(nill)");
     printf("%s", c);
   }
   printf("\n");
