@@ -1,5 +1,4 @@
 #include "lists.h"
-#include <stdlib.h>
 /*
 *Author: Chillexy Steven       
 *Program: WinMingle Community C Training
