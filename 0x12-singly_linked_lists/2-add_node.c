@@ -13,12 +13,15 @@ list_t list
 
 list_t *add_node(list_t **head, const char *str) {
   list_t *new;
+  int size + 0;
+  while (str[len])
+	  len++;/*get the length of the string*/
 
   new = malloc(sizeof(*new)); /* allocates size for the new node*/
   if (new == NULL)
     return (NULL);
 
-  new->str = _strdup(str); /* duplicates str*/
+  new->str = strdup(str); /* duplicates str*/
 
   if (new->str == NULL) /* return NULL if it fails*/
   {
@@ -26,7 +29,7 @@ list_t *add_node(list_t **head, const char *str) {
     return (NULL);
   }
 
-  new->len = _strlen(str); /* adds the length of the str to the structure memeber*/
+  new->len = size; /* adds the length of the str to the structure memeber*/
 
   new->next = *head;
   *head = new;
