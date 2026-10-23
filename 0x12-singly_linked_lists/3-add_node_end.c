@@ -1,10 +1,10 @@
 #include "lists.h"
 #include <string.h>
-
+#include <stdlib.h>
 /*
 *Author: Chillexy Steven
 
- *Program: WinMingle Community C Training
+*Program: WinMingle Community C Training
 
 *Description: this function adds a new node to the end of s list_t list
 *
