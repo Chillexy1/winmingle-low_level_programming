@@ -13,6 +13,9 @@
 list_t *add_node_end(list_t **head, const char *str) {
   list_t *new;     /*create the new node */
   list_t *current; /* use this to walk through our node/ */
+  int size = 0;
+  while (str[size])
+	  size++;
 
   new = malloc(sizeof(*new)); /* allocate memory to the node */
   if (new == NULL)
@@ -20,13 +23,13 @@ list_t *add_node_end(list_t **head, const char *str) {
 
   new->str = strdup(str); /* duplicate string */
   if (new->str ==
-      NULL) // free nrw and return null if the new created str failed
+      NULL) /* free nrw and return null if the new created str failed*/
   {
     free(new);
     return (NULL);
   }
 
-  new->len = strlen(str); /* get length of string */
+  new->len = size; /* set the  length of string to the variable */
 
   new->next = NULL; /* make the new node to become the last node */
 
@@ -44,5 +47,5 @@ list_t *add_node_end(list_t **head, const char *str) {
 
   current->next = new; /* link the new node */
 
-  return (new); // return the address of the new element
+  return (new); /* return the address of the new element*/
 }
