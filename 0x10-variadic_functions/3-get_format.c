@@ -8,7 +8,13 @@
  * to call while using the struct we're created in our header file
  */
 
-void print_char(va_list *args) { printf("%c", va_arg(*args, int)); }
+void print_char(va_list *args)
+{
+	char c;
+	c = va_arg(*args, int);
+	/*printf("%c", va_arg(*args, int));*/
+	printf("%c\n", c);
+}
 
 void print_int(va_list *args) { printf("%d", va_arg(*args, int)); }
 
