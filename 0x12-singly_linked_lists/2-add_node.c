@@ -15,22 +15,22 @@ list_t list
 list_t *add_node(list_t **head, const char *str) {
   list_t *new;
 
-  new = malloc(sizeof(*new)); // allocates size for the new node
+  new = malloc(sizeof(*new)); /* allocates size for the new node*/
   if (new == NULL)
     return (NULL);
 
-  new->str = strdup(str); // duplicates str
+  new->str = _strdup(str); /* duplicates str*/
 
-  if (new->str == NULL) // return NULL if it fails
+  if (new->str == NULL) /* return NULL if it fails*/
   {
     free(new);
     return (NULL);
   }
 
-  new->len = strlen(str); // adds the length of the str to the structure memeber
+  new->len = _strlen(str); /* adds the length of the str to the structure memeber*/
 
   new->next = *head;
   *head = new;
 
-  return (new); // returns the address of the new element
+  return (new); /* returns the address of the new element*/
 }
