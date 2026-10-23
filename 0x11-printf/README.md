@@ -86,3 +86,6 @@ FUTURE IMPROVEMENT IS GUARANTEED..
 
 Author:
 	Chillexy Steven
+
+Community/Tutor:
+    Winmingle Community
