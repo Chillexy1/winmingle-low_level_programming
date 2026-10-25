@@ -4,24 +4,24 @@
 ;"Hello WINMMINGLE" to the terminal using printf
 
 section .data
-        message db "Hello, WINMMINGLE", 10, 0
+	message db "Hello, WINMMINGLE", 10, 0
 
 section .text
-        global main
+	global main
         extern printf
 
 main:
-    push rbp
-    mov rbp, rsp
+	push rbp
+	mov rbp, rsp
 
-    mov rdi, message
+	mov rdi, message
 
-    xor eax,eax
-    call printf
+	xor eax,eax
+	call printf
 
-    xor eax, eax
+	xor eax, eax
 
-    pop rbp
+	pop rbp
 
-    ret
+	ret
 
