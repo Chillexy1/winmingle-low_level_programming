@@ -11,11 +11,17 @@ section .text
         extern printf
 
 main:
+    push rbp
+    mov rbp, rsp
+
     mov rdi, message
 
     xor eax,eax
     call printf
 
     xor eax, eax
+
+    pop rbp
+
     ret
 
