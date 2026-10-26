@@ -20,14 +20,14 @@ int main(int argc, char *argv[])
 
 	if (argc != 3)
 	{
-		dprintf(2, "Usage: %s %s\n", argv[1], argv[2]);
+		dprintf(2, "Usage: cp %s %s\n", argv[1], argv[2]);
 		exit(97);
 	}
 
 	file_from = open(argv[1], O_RDONLY);
 	if (file_from == -1)
 	{
-		dprintf(2, "Error: can't read from the file %s\n", argv[1]);
+		dprintf(2, "Error: Can't read from file %s\n", argv[1]);
 
 		exit(98);
 	}
@@ -53,7 +53,7 @@ int main(int argc, char *argv[])
 			{
 				close(file_from);
 				close(file_to);
-				dprintf(2, "Erro: can't print to %s\n", argv[2]);
+				dprintf(2, "Erro: Can't print to %s\n", argv[2]);
 				exit(99);
 			}
 			total += written;
@@ -69,13 +69,13 @@ int main(int argc, char *argv[])
 	/* checks if closed files failed also */
 	if (close(file_from) == -1)
 	{
-		dprintf(2, "Error: can't close fd %li\n", FD_VALUE);
+		dprintf(2, "Error: Can't close fd %li\n", FD_VALUE);
 		exit(100);
 	}	
 
 	if (close(file_to) == -1)
 	{
-		dprintf(2, "Error: can't close fd %li\n", FD_VALUE);
+		dprintf(2, "Error: Can't close fd %li\n", FD_VALUE);
 		exit(100);
 	}
 
