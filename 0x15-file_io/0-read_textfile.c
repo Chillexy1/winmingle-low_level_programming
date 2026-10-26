@@ -21,7 +21,10 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 
 	if (!filename) /* checks if filename is NULL */
+	{
+		free(buffer);
 		return (0);
+	}
 
 	fd = open(filename, O_RDONLY);
 	if (fd == -1)/* checks if file opening succeeded or not */
