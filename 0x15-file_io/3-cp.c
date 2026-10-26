@@ -13,7 +13,7 @@ int main(int argc, char *argv[])
 {
 	int file_to;
 	int file_from;
-	char *buffer[1024];
+	char buffer[1024];
 	ssize_t FD_VALUE;
 	ssize_t written;
 	ssize_t total;
