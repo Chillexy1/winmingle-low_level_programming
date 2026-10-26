@@ -1,5 +1,4 @@
 #include "main.h"
-
 /*
 *Author: Chillexy Steven    
 *
@@ -16,7 +15,6 @@ int main(int argc, char *argv[])
 	ssize_t read_size;
 	Elf64_Ehdr header64;
 	Elf32_Ehdr header32;
-
 
 	if (argc != 2)  /*handles arguments counts */
 	{
