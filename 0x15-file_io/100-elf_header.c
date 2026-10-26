@@ -20,7 +20,7 @@ int main(int argc, char *argv[])
 
 	if (argc != 2)  /*handles arguments counts */
 	{
-		fprintf(stderr, "Usage: elf_header elf_filename\n");
+		printf("stderr, Usage: elf_header elf_filename\n");
 		exit(98);
 	}
 
@@ -28,7 +28,7 @@ int main(int argc, char *argv[])
 	fd = open(argv[1], O_RDONLY);
 	if (fd == -1)
 	{
-		fprintf(stderr, "Error: cannot open file %s\n", argv[1]);
+		printf("stderr, Error: cannot open file %s\n", argv[1]);
 		exit(98);
 	}
 
@@ -37,7 +37,7 @@ int main(int argc, char *argv[])
 	/*check if read file isn't empty  */
 	if (read_size != 16)
 	{
-		fprintf(stderr, "Error: cannot read ELF header\n");
+		printf("stderr, Error: cannot read ELF header\n");
 		close(fd);
 		exit(98);
 	}
@@ -47,7 +47,7 @@ int main(int argc, char *argv[])
 	{
 		if (buffer[i] != magic[i])
 		{
-			fprintf(stderr, "Error: Not an ELF file\n");
+			printf("stderr, Error: Not an ELF file\n");
 			close(fd);
 			exit(98);
 		}
@@ -56,7 +56,7 @@ int main(int argc, char *argv[])
 	/* check if theres no error ELF class to work with */
 	if(buffer[EI_CLASS] != ELFCLASS32 && buffer[EI_CLASS] != ELFCLASS64)
 	{
-		fprintf(stderr, "Error: Invalid ELF class\n");
+		printf("stderr, Error: Invalid ELF class\n");
 		close(fd);
 		exit(98);
 	}
@@ -64,7 +64,7 @@ int main(int argc, char *argv[])
 	/* use the one lseek restriction given */
 	if (lseek(fd, 0, SEEK_SET) == -1)
 	{
-		fprintf(stderr, "Error: cannot seek file\n");
+		printf("stderr, Error: cannot seek file\n");
 		close(fd);
 		exit(98);
 	}
@@ -76,7 +76,7 @@ int main(int argc, char *argv[])
 		read_size = read(fd, &header32, sizeof(header32));
 		if (read_size != sizeof(header32))
 		{
-			fprintf(stderr,"Error: cannot read ELF file\n");
+			printf("stderr,Error: cannot read ELF file\n");
 			close(fd);
 			exit(98);
 		}
@@ -102,7 +102,7 @@ int main(int argc, char *argv[])
 			printf("Data:			2's complement, big endian\n");
 		else
 		{
-			fprintf(stderr,"Error: Invalid ELF data encoding\n");
+			printf("stderr,Error: Invalid ELF data encoding\n");
 			close(fd);
 			exit(98);
 		}
@@ -111,7 +111,7 @@ int main(int argc, char *argv[])
 		if (header32.e_ident[EI_VERSION] == EV_CURRENT)
 			printf("Version:		1 (current)\n");
 		else{
-			fprintf(stderr,"Error, not an ELF version file\n");
+			printf("stderr,Error, not an ELF version file\n");
 			close(fd);
 			exit(98);
 		}
@@ -145,7 +145,7 @@ int main(int argc, char *argv[])
 		read_size = read(fd, &header64, sizeof(header64));
 		if (read_size != sizeof(header64))
 		{
-			fprintf(stderr,"Error: cannot read ELF file\n");
+			printf("stderr,Error: cannot read ELF file\n");
 			close(fd);
 			exit(98);
 		}
@@ -172,7 +172,7 @@ int main(int argc, char *argv[])
 			printf("Data:			2's complement, big endian\n");
 		else
 		{
-			fprintf(stderr, "Error: Invalid ELF data encoding\n");
+			printf("stderr, Error: Invalid ELF data encoding\n");
 			close(fd);
 			exit(98);
 		}
@@ -181,7 +181,7 @@ int main(int argc, char *argv[])
 		if (header64.e_ident[EI_VERSION] == EV_CURRENT)
 			printf("Version:		1 (current)\n");
 		else{
-			fprintf(stderr,"Error, not an ELF version file\n");
+			printf("stderr,Error, not an ELF version file\n");
 			close(fd);
 			exit(98);
 		}
