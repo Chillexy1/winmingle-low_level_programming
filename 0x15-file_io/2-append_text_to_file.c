@@ -11,7 +11,7 @@
 */
 int append_text_to_file(const char *filename, char *text_content)
 {
-	int fd; 
+	int fd, len = 0; 
 
 
 	if (!filename) /* checks if filename is NULL */
@@ -23,8 +23,11 @@ int append_text_to_file(const char *filename, char *text_content)
 		return (-1);
 
 	if (text_content) /* writes to file if text_content isn't NULL */
-		write(fd, text_content, _strlen(text_content));
-
+	{
+		while (text_content[len])
+				len++;
+		write(fd, text_content, len);
+	}
 	close(fd); /* closes file after use */
 
 	return (1);/* success */
