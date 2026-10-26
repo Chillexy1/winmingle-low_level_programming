@@ -33,7 +33,7 @@ int main(int argc, char *argv[])
 	}
 
 	file_to = open(argv[2], O_WRONLY| O_CREAT | O_TRUNC, 0644);
-	if (file_to == 1)
+	if (file_to == -1)
 	{
 		close(file_from);
 		exit(98);
