@@ -10,7 +10,7 @@
 */
 int create_file(const char *filename, char *text_content)
 {
-	int fd;
+	int fd, len = 0;
 
 	if (!filename) /* checks if filename is NULL */
 		return (-1);
@@ -22,12 +22,15 @@ int create_file(const char *filename, char *text_content)
 			return (-1);
 	}
 
-
-	/*fd = open(filename, O_RDWR | O_CREAT | O_TRUNC , 0644* rw---- permission *);
-	if (fd == -1) * return -1 if file failed to open *
-		return (-1);*/
-
-	write(fd, text_content, _strlen(text_content));
+	else
+	{
+		fd = open(filename, O_RDWR | O_CREAT | O_TRUNC , 0644/* rw---- permission */);
+		if (fd == -1) /* return -1 if file failed to open */
+			return (-1);	
+		while (text_content[len])
+			len++;
+		write(fd, text_content, len);
+	}
 
 	close(fd);
 
